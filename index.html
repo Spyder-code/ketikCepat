@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ketik Cepat</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .correct{
+            color: green;
+        }
+        .incorrect{
+            color: red;
+        }
+    </style>
+</head>
+<body class="bg-blue-300">
+    <div class="text-center justify-content-center mt-48" id="play">
+        <div class="test">
+            <h3>
+                Seberapa cepat jari kamu ngetik dalam satu menit? Tekan Spacebar untuk setiap kata.
+                <br>
+                Hasil kecepatan ngetik kamu akan ditampilkan pada angka
+                <a href="#" title="Huruf per menit">HPM</a>
+                dan
+                <a href="#" title="Kata per menit">KPM</a>
+            </h3>
+        </div>
+        <button class="bg-green-100 p-2">Play</button>
+    </div>
+    <div id="main">
+        <div class="flex p-10">
+            <div class="p-5 bg-green-200">
+                <h3>Benar: <span id="correct">0</span></h3>
+            </div>
+            <div class="p-5 bg-red-500">
+                <h3>Salah: <span id="incorrect">0</span></h3>
+            </div>
+            <div class="p-5 bg-gray-300">
+                <h3>Waktu: <span id="time">20</span></h3>
+            </div>
+        </div>
+        <div class="text-center m-10" id="app">
+            <div class="hitungMundur">
+                <h1 style="font-size: 40pt; font-weight: bold;" id="delay">3</h1>
+            </div>
+            <div class="border border-green-200 p-5 bg-gray-100">
+                <p id="soal"></p>
+            </div>
+            <input type="text" id="input" class="text-center p-2 my-5" style="width: 500px;" autofocus>
+        </div>     
+        <h1 class="text-xl text-center" id="result" style="font-size: 50pt; font-weight: bold;"></h1>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
